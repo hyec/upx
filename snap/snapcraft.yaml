@@ -1,0 +1,19 @@
+name: upx
+version: 'v0.2.3'
+summary: upx is a tool for managing files in UPYUN. Mac, Linux, Windows supported
+description: |
+  upx is a tool for managing files in UPYUN. Mac, Linux, Windows supported
+  https://github.com/upyun/upx
+
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
+
+parts:
+  upx:
+    source: .
+    plugin: go
+    go-importpath: github.com/upyun/upx
+
+apps:
+  upx:
+    command: upx
